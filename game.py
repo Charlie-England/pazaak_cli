@@ -4,8 +4,12 @@ from player import Player
 def draw_and_update(p1,o1,current_player):
     card = random.randint(1,10)
     if current_player:
-        o1.update_field(card)
-        return 1 #return 1 so that next player is player
+        o1.choice(p1)
+        if not o1.stand:
+            o1.update_field(card)
+            return 1 #return 1 so that next player is player
+        else:
+            return 1
     else:
         p1.update_field(card)
         return 0 #return 0 so that next player is opponent

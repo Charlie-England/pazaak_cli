@@ -24,3 +24,13 @@ class Player():
 
     def update_field(card):
         self.player_field.append(card)
+
+    def choice(player):
+        """
+        AI to make a choice based on current hand
+        """
+        if self.score == 20:
+            self.stand = True
+        if self.score > 20:
+            pass
+
